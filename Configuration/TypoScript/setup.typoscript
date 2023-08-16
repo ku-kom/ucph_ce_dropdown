@@ -1,0 +1,64 @@
+##########################
+#### CTYPE: DROPDOWN ####
+##########################
+
+tt_content.ucph_ce_dropdown >
+tt_content.ucph_ce_dropdown =< lib.contentElement
+tt_content.ucph_ce_dropdown {
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = Dropdown
+    templateRootPaths {
+        10 = EXT:ucph_ce_dropdown/Resources/Private/Templates/ContentElements/
+        20 = {$ucph_ce_dropdown.templates.templateRootPath}
+    }
+	partialRootPaths {
+		10 = EXT:ucph_ce_dropdown/Resources/Private/Partials/ContentElements/
+        20 = {$ucph_ce_dropdown.templates.partialRootPath}
+	}
+
+    layoutRootPaths {
+        10 = EXT:ucph_ce_dropdown/Resources/Private/Layouts/ContentElements/
+        20 = {$ucph_ce_dropdown.templates.layoutRootPath}
+    }
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_ucph_ce_dropdown_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+            orderBy = sorting
+            as = linklist
+        }
+    }
+}
+
+##########################
+#### OPTION TO ADD CSS ###
+##########################
+lib.ucph_ce_dropdown.pagecss = TEXT
+lib.ucph_ce_dropdown.pagecss {
+    if.isTrue = {$ucph_ce_dropdown.assets.extraCss}
+    value = {$ucph_ce_dropdown.assets.extraCss}
+    htmlSanitize = 1
+}
+
+##########################
+#### OPTION TO ADD JS ####
+##########################
+lib.ucph_ce_dropdown.pagejs = TEXT
+lib.ucph_ce_dropdown.pagejs {
+    if.isTrue = {$ucph_ce_dropdown.assets.extraJs}
+    value = {$ucph_ce_dropdown.assets.extraJs}
+    htmlSanitize = 1
+}
