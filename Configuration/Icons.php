@@ -17,6 +17,6 @@ return [
     // icon identifier
     'ucph-ce-dropdown-icon' => [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        'source' => 'EXT:ucph_ce_dropdown/Resources/Public/Icons/Extension.svg',
+        'source' => 'EXT:ucph_ce_dropdown/Resources/Public/Icons/menu-button.svg',
     ],
 ];
