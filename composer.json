@@ -1,7 +1,7 @@
 {
     "name": "university-of-copenhagen/ucph-ce-dropdown",
     "type": "typo3-cms-extension",
-    "description": "Standalone Bootstrap dropdowns",
+    "description": "UCPH TYPO3 content element Dropdown",
     "authors": [{
         "name": "Nanna Ellegaard",
         "role": "Developer"
