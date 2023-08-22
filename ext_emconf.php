@@ -8,7 +8,7 @@
  */
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'KU Bootstrap Dropdowns',
+    'title' => 'UCPH TYPO3 content element "Dropdowns"',
     'description' => 'UCPH TYPO3 content element "Dropdown"',
     'category' => 'templates',
     'constraints' => [
