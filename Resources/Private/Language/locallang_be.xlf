@@ -10,10 +10,10 @@
             <source>Link list</source>
         </trans-unit>
         <trans-unit id="description">
-            <source>Insert a list of link as a dropdown</source>
+            <source>Insert a list of links in a dropdown</source>
         </trans-unit>
          <trans-unit id="dropdown_btn_description">
-            <source>Clickable title in the drop down list</source>
+            <source>Clickable title in the dropdown list</source>
         </trans-unit>
         <trans-unit id="add_link">
             <source>Add link</source>
