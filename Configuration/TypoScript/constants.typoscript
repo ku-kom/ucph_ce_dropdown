@@ -1,11 +1,11 @@
-ucph_ce_dropdown {
+ucph_content_dropdown {
     templates {
         # cat=UCPH bootstrap dropdowns/file; type=string; label=Layout Root Path: Path to templates (with a trailing slash).
-        templateRootPath = EXT:ucph_ce_dropdown/Resources/Private/Templates/
+        templateRootPath = EXT:ucph_content_dropdown/Resources/Private/Templates/
         # cat=UCPH bootstrap dropdowns/file; type=string; label=Partial Root Path: Path to partials (with a trailing slash).
-        partialRootPath = EXT:ucph_ce_dropdown/Resources/Private/Partials/
+        partialRootPath = EXT:ucph_content_dropdown/Resources/Private/Partials/
         # cat=UCPH bootstrap dropdowns/file; type=string; label=Layout Root Path: Path to layout (with a trailing slash).
-        layoutRootPath = EXT:ucph_ce_dropdown/Resources/Private/Layouts/
+        layoutRootPath = EXT:ucph_content_dropdown/Resources/Private/Layouts/
     }
     assets {
         # cat=UCPH bootstrap dropdowns/Assets/; type=string; label=CSS assets: Path to stylesheet.

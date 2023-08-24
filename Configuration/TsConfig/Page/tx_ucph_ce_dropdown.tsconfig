@@ -3,14 +3,14 @@
 ####################################
 mod.wizards.newContentElement.wizardItems.interactive {
     elements {
-        ucph_ce_dropdown {
+        ucph_content_dropdown {
             iconIdentifier = ucph-ce-dropdown-icon
-            title = LLL:EXT:ucph_ce_dropdown/Resources/Private/Language/locallang_be.xlf:title
-            description = LLL:EXT:ucph_ce_dropdown/Resources/Private/Language/locallang_be.xlf:description
+            title = LLL:EXT:ucph_content_dropdown/Resources/Private/Language/locallang_be.xlf:title
+            description = LLL:EXT:ucph_content_dropdown/Resources/Private/Language/locallang_be.xlf:description
             tt_content_defValues {
-                CType = ucph_ce_dropdown
+                CType = ucph_content_dropdown
             }
         }
     }
-    show := addToList(ucph_ce_dropdown)
+    show := addToList(ucph_content_dropdown)
 }

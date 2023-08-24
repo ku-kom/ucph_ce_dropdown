@@ -12,11 +12,11 @@
             </ul>
         </f:if>
 
-        <f:if condition="{lib.ucph_ce_dropdown.pagecss !== ''}">
-            <f:asset.css identifier="{data.CType}_css" href="{f:cObject(typoscriptObjectPath: 'lib.ucph_ce_dropdown.pagecss')}" />
+        <f:if condition="{lib.ucph_content_dropdown.pagecss !== ''}">
+            <f:asset.css identifier="{data.CType}_css" href="{f:cObject(typoscriptObjectPath: 'lib.ucph_content_dropdown.pagecss')}" />
         </f:if>
-        <f:if condition="{lib.ucph_ce_dropdown.pagejs !== ''}">
-            <f:asset.script identifier="{data.CType}_js" src="{f:cObject(typoscriptObjectPath: 'lib.ucph_ce_dropdown.pagejs')}" />
+        <f:if condition="{lib.ucph_content_dropdown.pagejs !== ''}">
+            <f:asset.script identifier="{data.CType}_js" src="{f:cObject(typoscriptObjectPath: 'lib.ucph_content_dropdown.pagejs')}" />
         </f:if>
 </f:section>
 

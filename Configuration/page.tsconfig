@@ -1,2 +1,2 @@
 
-@import "EXT:ucph_ce_dropdown/Configuration/TsConfig/Page/*"
+@import "EXT:ucph_content_dropdown/Configuration/TsConfig/Page/*"

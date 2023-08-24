@@ -1,13 +1,13 @@
 <?php
 
 /*
- * This file is part of the package ucph_ce_dropdown.
+ * This file is part of the package ucph_content_dropdown.
  *
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  */
 
-$extKey ='ucph_ce_dropdown';
+$extKey ='ucph_content_dropdown';
 $coreLanguageFile = 'EXT:core/Resources/Private/Language/locallang_general.xlf';
 
 return [
@@ -88,7 +88,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tt_content',
-                'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.{#CType}=\'ucph_ce_dropdown\'',
+                'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.{#CType}=\'ucph_content_dropdown\'',
                 'maxitems' => 1,
                 'default' => 0,
             ],
@@ -149,8 +149,8 @@ return [
                         0
                     ]
                 ],
-                'foreign_table' => 'tx_ucph_ce_dropdown_item',
-                'foreign_table_where' => 'AND tx_ucph_ce_dropdown_item.pid=###CURRENT_PID### AND tx_ucph_ce_dropdown_item.sys_language_uid IN (-1,0)',
+                'foreign_table' => 'tx_ucph_content_dropdown_item',
+                'foreign_table_where' => 'AND tx_ucph_content_dropdown_item.pid=###CURRENT_PID### AND tx_ucph_content_dropdown_item.sys_language_uid IN (-1,0)',
                 'default' => 0
             ]
         ],

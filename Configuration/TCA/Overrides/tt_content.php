@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the package ucph_ce_dropdown.
+ * This file is part of the package ucph_content_dropdown.
  *
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
@@ -9,7 +9,7 @@
 
 defined('TYPO3') or die('Access denied.');
 
-call_user_func(function ($extKey ='ucph_ce_dropdown', $contentType ='ucph_ce_dropdown') {
+call_user_func(function ($extKey ='ucph_content_dropdown', $contentType ='ucph_content_dropdown') {
     // Add Content Element
     if (!is_array($GLOBALS['TCA']['tt_content']['types'][$contentType] ?? false)) {
         $GLOBALS['TCA']['tt_content']['types'][$contentType] = [];
@@ -39,7 +39,7 @@ call_user_func(function ($extKey ='ucph_ce_dropdown', $contentType ='ucph_ce_dro
 
     // New palette
     $GLOBALS['TCA']['tt_content']['palettes']['dropdown_content'] = array(
-        'showitem' => 'header,--linebreak--,tx_ucph_ce_dropdown_item','canNotCollapse' => 1
+        'showitem' => 'header,--linebreak--,tx_ucph_content_dropdown_item','canNotCollapse' => 1
     );
 
     // Configure element type
@@ -78,13 +78,13 @@ call_user_func(function ($extKey ='ucph_ce_dropdown', $contentType ='ucph_ce_dro
 
     // Add Inline records
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', [
-        'tx_ucph_ce_dropdown_item' => [
+        'tx_ucph_content_dropdown_item' => [
             'exclude' => true,
             'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:add_links',
             'config' => [
                 'type' => 'inline',
                 'minitems' => 1,
-                'foreign_table' => 'tx_ucph_ce_dropdown_item',
+                'foreign_table' => 'tx_ucph_content_dropdown_item',
                 'foreign_field' => 'tt_content',
                 'appearance' => [
                     'newRecordLinkTitle' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:add_link',
