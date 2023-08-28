@@ -12,7 +12,7 @@ $coreLanguageFile = 'EXT:core/Resources/Private/Language/locallang_general.xlf';
 
 return [
     'ctrl' => [
-        'label' => 'header',
+        'label' => 'tx_ucph_content_dropdown_item_text',
         'sortby' => 'sorting',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -60,8 +60,8 @@ return [
         ],
         'linkitems' => [
             'showitem' => '
-                header,
-                link,
+            tx_ucph_content_dropdown_item_text,
+            tx_ucph_content_dropdown_item_link,
             '
         ],
         'general' => [
@@ -159,7 +159,7 @@ return [
                 'type' => 'passthrough'
             ]
         ],
-        'header' => [
+        'tx_ucph_content_dropdown_item_text' => [
             'exclude' => true,
             'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:link_text',
             'config' => [
@@ -170,7 +170,7 @@ return [
                 'eval' => 'trim,required'
             ],
         ],
-        'link' => [
+        'tx_ucph_content_dropdown_item_link' => [
             'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:link_item',
             'config' => [
                 'type' => 'input',

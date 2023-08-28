@@ -37,11 +37,6 @@ call_user_func(function ($extKey ='ucph_content_dropdown', $contentType ='ucph_c
     // Assign Icon
     $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes'][$contentType] = 'ucph-ce-dropdown-icon';
 
-    // New palette
-    $GLOBALS['TCA']['tt_content']['palettes']['dropdown_content'] = array(
-        'showitem' => 'header,--linebreak--,tx_ucph_content_dropdown_item','canNotCollapse' => 1
-    );
-
     // Configure element type
     $GLOBALS['TCA']['tt_content']['types'][$contentType] = array_replace_recursive(
         $GLOBALS['TCA']['tt_content']['types'][$contentType],
@@ -49,7 +44,9 @@ call_user_func(function ($extKey ='ucph_content_dropdown', $contentType ='ucph_c
             'showitem' => '
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                --palette--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:title;dropdown_content,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
+                tx_ucph_content_dropdown_btn,
+                tx_ucph_content_dropdown_item,
             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
@@ -63,21 +60,22 @@ call_user_func(function ($extKey ='ucph_content_dropdown', $contentType ='ucph_c
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
                 rowDescription,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
-            ',
-            'columnsOverrides' => [
-                'header' => [
-                    'config' => [
-                        'size' => 25,
-                        'max' => 50,
-                        'eval' => 'trim,required',
-                    ]
-                ],
-            ]
+            '
         ]
     );
 
     // Add Inline records
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', [
+        'tx_ucph_content_dropdown_btn' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:link_btn',
+            'config' => [
+                'type' => 'input',
+                'size' => 25,
+                'max' => 50,
+                'eval' => 'trim,required'
+            ],
+        ],
         'tx_ucph_content_dropdown_item' => [
             'exclude' => true,
             'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:add_links',

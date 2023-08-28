@@ -21,6 +21,9 @@
         <trans-unit id="add_links">
             <source>Add links</source>
         </trans-unit>
+        <trans-unit id="link_btn">
+            <source>Link button text</source>
+        </trans-unit>
         <trans-unit id="add_link_text">
             <source>Add link text</source>
         </trans-unit>
