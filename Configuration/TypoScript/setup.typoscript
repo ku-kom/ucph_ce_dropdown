@@ -24,6 +24,11 @@ tt_content.ucph_content_dropdown {
         20 = {$ucph_content_dropdown.templates.layoutRootPath}
     }
 
+    variables {
+        ucph_content_dropdown_alignment = TEXT
+        ucph_content_dropdown_alignment.data = flexform: pi_flexform:settings.alignment
+    }
+
     ##########################
     ### DATA PREPROCESSING ###
     ##########################
