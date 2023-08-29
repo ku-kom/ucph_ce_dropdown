@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>EXT:ucph_content_dropdown/Resources/Private/Language/locallang._bexlf:ucph_content_cardgroup_options</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.alignment>
+                        <label>LLL:EXT:ucph_content_dropdown/Resources/Private/Language/locallang_be.xlf:dropdown_position_title</label>
+                        <exclude>true</exclude>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">LLL:EXT:ucph_content_dropdown/Resources/Private/Language/locallang_be.xlf:dropdown_position_down</numIndex>
+                                    <numIndex index="1"></numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">LLL:EXT:ucph_content_dropdown/Resources/Private/Language/locallang_be.xlf:dropdown_position_up</numIndex>
+                                    <numIndex index="1">dropup</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">LLL:EXT:ucph_content_dropdown/Resources/Private/Language/locallang_be.xlf:dropdown_position_start</numIndex>
+                                    <numIndex index="1">dropstart</numIndex>
+                                </numIndex>
+                                 <numIndex index="3" type="array">
+                                    <numIndex index="0">LLL:EXT:ucph_content_dropdown/Resources/Private/Language/locallang_be.xlf:dropdown_position_end</numIndex>
+                                    <numIndex index="1">dropend</numIndex>
+                                </numIndex>
+                            </items>
+                            <default></default>
+                        </config>
+                    </settings.alignment>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

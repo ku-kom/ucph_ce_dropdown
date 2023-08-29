@@ -33,6 +33,25 @@
         <trans-unit id="link_text">
             <source>Link text</source>
         </trans-unit>
+        <trans-unit id="dropdown_position_options">
+            <source>Dropdown options</source>
+        </trans-unit>
+        <trans-unit id="dropdown_position_title">
+            <source>Dropdown position</source>
+        </trans-unit>
+        <trans-unit id="dropdown_position_down">
+            <source>Down (default)</source>
+        </trans-unit>
+        <trans-unit id="dropdown_position_up">
+            <source>Up</source>
+        </trans-unit>
+        <trans-unit id="dropdown_position_end">
+            <source>Right</source>
+        </trans-unit>
+        
+        <trans-unit id="dropdown_position_start">
+            <source>Left</source>
+        </trans-unit>
         </body>
     </file>
 </xliff>

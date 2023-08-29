@@ -47,6 +47,8 @@ call_user_func(function ($extKey ='ucph_content_dropdown', $contentType ='ucph_c
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
                 tx_ucph_content_dropdown_btn,
                 tx_ucph_content_dropdown_item,
+            --div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:dropdown_position_options,
+                pi_flexform;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:dropdown_position_options,
             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
@@ -101,4 +103,11 @@ call_user_func(function ($extKey ='ucph_content_dropdown', $contentType ='ucph_c
             ],
         ],
     ]);
+
+    // Add flexForms for content element configuration
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        '*',
+        'FILE:EXT:' . $extKey . '/Configuration/FlexForms/UcphContentDropdown.xml',
+        $contentType
+    );
 });
